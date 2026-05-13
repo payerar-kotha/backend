@@ -21,5 +21,6 @@ async def root():
 
 @app.post("/new-message")
 async def new_message(request: Request):
-    db["messages"].insert_one(await request.json())
+    data = await request.json()
+    db["messages"].insert_one(data)
     return {"message": "Message received"}
