@@ -11,7 +11,7 @@ db = connect_to_db()
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://payerar-kotha.netlify.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
